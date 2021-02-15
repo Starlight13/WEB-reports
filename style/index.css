@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/vectors/japanese-great-wave-seamless-pattern-background-vector-id1173754261?b=1&k=6&m=1173754261&s=612x612&w=0&h=9zJI6c54bAs7mgX3Vq15_5rQSMbsTUkGwNDfYDAAxeA=");
+    background-repeat: repeat;
+}
+
+div {
+    background: #4E5C93;
+    margin: 0px;
+}
+
+div#name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #E6EFEF;
+}
+
+div#menu {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    width: 100%;
+}
+
+div#menu div, #home {
+    background-color: #E6EFEF;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #0F1428;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+div#menu div:hover, #home:hover {
+    background-color: #4B9B9B;
+    color: #E6EFEF;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+div#name h1, div#name h2 {
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+}

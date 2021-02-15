@@ -1,0 +1,63 @@
+.tab p {
+    color: white;
+    transition: color 0.2s;
+}
+
+.tab:hover p {
+    color: #4B9B9B;
+}
+
+div#side-menu {
+    width: 310px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: left;
+}
+
+div#side-menu>div {
+    font-family: 'Montserrat', sans-serif;
+    color: #E6EFEF;
+    margin-left: 10px;
+}
+
+div.big-tab > div.tab{
+    margin-left: 20px;
+}
+
+div.view {
+    display: none;
+    float: right;
+    width: 73%;
+    margin: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #4E5C93EB;
+    padding: 10px;
+}
+
+div.view a{
+    color: white;
+    background-color: #4B9B9B;
+}
+
+div.view li, div.view h3 {
+    margin: 10px;
+}
+
+div.view h3 {
+    text-align: center;
+}
+
+div.view > img{
+    max-width: 80%;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+#one, #two{
+    display: none;
+}

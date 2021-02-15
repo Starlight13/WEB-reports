@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    function show(view) {
+        const elem = document.getElementById(view);
+        const views = document.querySelectorAll(".view");
+        console.log(views);
+        views.forEach(view => {
+            view.setAttribute("style", "display: none");
+        })
+        elem.setAttribute("style", "display: inline");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="#" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="#" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="#" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="#" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="#" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="#" id="lab7">
+            <div> Лаб №7</div>
+        </a>
+        <a href="#" id="lab8">
+            <div> Лаб №8</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №1</p>
+        </div>
+        <div class="tab" onclick="show('zero')">
+            <p>Опис предметної області</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Середовище розробки сайту. <br />Місце розташування сайту</p>
+        </div>
+        <div class="big-tab">
+            <p>Зовнішний вигляд сайту. <br />НТМL-коди файлів</p>
+            <div class="tab" onclick="show('three')">
+                <p>HTML-код ТАБЛИЦЬ – скриншот результату виведення таблиці</p>
+            </div>
+            <div class="tab" onclick="show('four')">
+                <p>HTML-код ФОРМИ</p>
+            </div>
+            <div class="tab" onclick="show('five')">
+                <p>HTML-код ЗОБРАЖЕННЯ</p>
+            </div>
+        </div>
+        <div class="tab" onclick="show('six')">
+            <p>Використана література, сайти,<br />при виконанні лабораторної роботи №1</p>
+        </div>
+        <div class="tab" onclick="show('seven')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОГО ГАЛУЗІ.
+            РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, ФОРМАМИ в ТА ІНШИМИ ЕЛЕМЕНТАМИ HTML-ДОКУМЕНТІВ</h3>
+
+        <h3>Мета: придбати практичні навички роботи з html-документом, таблицями,формами, зображеннями, посиланнями</h3>
+
+        <h3>ХІД ВИКОНАННЯ РОБОТИ</h3>
+        <ol>
+            <li> Підготувати шаблон майбутнього звітного HTML-документу на 9 лабораторних робіт та розмістити у папці на
+                Гугл-Диску. Результати виконання кожної нової лабораторної роботи будуть добавлятись у цей
+                HTML-документ.</li>
+
+            <li>На свій розсуд вибрати любу предметну галузь і виконати опис цієї галузі, а саме: опис бізнес-логіки
+                системи
+                (функціонал майбутньої програми) , сценарій, об’екти взаимодії. Опис предметної області розмістити у
+                звітному
+                HTML-документі.</li>
+            <li>Вибрати на свій розсуд середовище розробки майбутнього сайту. Написати в ньому HTML-коди головної
+                сторінки та
+                інших WEB-сторінок сайту (застосунку), на яких розмістити на свій розсуд наступні елементи:
+                посилання на будь-яку WE B-сторінку;
+                <ul>
+                    <li>таблицю;</li>
+                    <li>форму;</li>
+                    <li>зображеня (або декілька зображень);</li>
+                    <li>заголовки;</li>
+                    <li>інші елементи HTML-документу ( за бажанням)</li>
+                </ul>
+            </li>
+            <li>Запустити даний документ у любому браузері для перевірки виведення елементів WEB-сайту (іноді його
+                будемо
+                називати просто HTML-документ, який буде містити визначену кількість WEB-сторінок).</li>
+
+            <li>У звітному HTML-документі розмістити результати виконання лабораторної роботи №1 ( див. Додаток1), а
+                саме:
+                <ul>
+                    <li>Тема та постановка задачі лабораторної роботи №1;</li>
+                    <li>Середовище розробки сайту. Місце розташування сайту;</li>
+                    <li>Зовнішний вигляд сайту. НТМL-коди файлів.</li>
+                    <li>HTML-код ТАБЛИЦЬ – скриншот результатувиведення таблиці ;</li>
+                    <li>HTML-код ФОРМИ;</li>
+                    <li>HTML-код ЗОБРАЖЕННЯ;</li>
+                    <li>Використана література, сайти, при виконанні лабораторної роботи №1;</li>
+                    <li>ВИСНОВКИ.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div class="view" id="two">
+        <h3>Середовище розробки сайту. Місце розміщення сайту.</h3>
+        <p>Для створення WEB-сайту я обрала середовище розробки Visual Studio Code.</p>
+        <p>WEB-сайт буде розміщений на GitHub Pages. Для доступу до сайту можна скористатись <a
+                href="https://starlight13.github.io/LogoShop/index.html" target="_blank">посиланням</a></p>
+    </div>
+    <div class="view" id="three">
+        <h3>HTML-код ТАБЛИЦЬ – скриншот результату виведення таблиці</h3>
+        <p>
+            <xmp>
+                <h5>Розмірна сітка:</h5>
+                <table rules="all">
+                    <tr>
+                        <th></th>
+                        <th>XS</th>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>L</th>
+                        <th>XL</th>
+                    </tr>
+                    <tr>
+                        <td class="head">Плечі</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Груди</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Рукава</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Талія</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Стегна</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                </table>
+            </xmp>
+        </p>
+        <img src="resources/Table.png" />
+    </div>
+    <div class="view" id="four">
+        <h3>HTML-код ФОРМИ</h3>
+        <xmp>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label>Ім'я</label>
+                        <input type="text" class="form-control" id="name" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Прізвище</label>
+                        <input type="text" class="form-control" id="surname" value="" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label>Область</label>
+                        <input type="text" class="form-control" id="oblast" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Місто</label>
+                        <input type="text" class="form-control" id="city" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label>Номер телефону</label>
+                        <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>№ відділення НП</label>
+                        <input type="text" class="form-control" id="NPnumber" required>
+                    </div>
+                </div>
+                <button type="button" data-dismiss="modal">Відмінити</button>
+                <button type="submit">Оформити замовлення
+            </form>
+            </form>
+        </xmp>
+        <img src="resources/Form.png" />
+    </div>
+    <div class="view" id="five">
+        <h3>HTML-код ЗОБРАЖЕННЯ</h3>
+        <xmp>
+            <div id="baner">
+                <img src="https://minimal.com.ua/wp-content/uploads/2020/08/RD-11.jpg" />
+            </div>
+        </xmp>
+        <img src="resources/Title.png"/>
+    </div>
+    <div class="view" id="six">
+        <h3>Використана література, сайти, при виконанні лабораторної роботи №1</h3>
+        <p>Htmlbook: <a href="http://htmlbook.ru/" target="_blank">http://htmlbook.ru/</a></p>
+        <p>MDB Web Docs: <a href="https://developer.mozilla.org/ru/" target="_blank">https://developer.mozilla.org/ru/</a></p>
+        <p>Stack Overflow: <a href="https://stackoverflow.com/" target="_blank">https://stackoverflow.com/</a></p>
+        <p>Бібліотека Bootstrap: <a href="https://getbootstrap.com/"> target="_blank"https://getbootstrap.com/</a></p>
+        <p>DigitalOcean: <a href="https://www.digitalocean.com/" target="_blank">https://www.digitalocean.com/</a></p>
+    </div>
+    <div class="view" id="seven">
+        <h3>ВИСНОВКИ</h3>
+        <p>У рамках даної лабараторної я ознайомилась із структурою HTML-документа. Ці знання я застосувала при створенні власного WEB-додатку.</p>
+        <p>Перед створенням WEB-додатку мною була досліджена предметна область та описані функціональні та нефункціональні вимоги. Розроблена Use Case діаграма. Це допомогло у розумінні, як повинна бути побудована структура WEB-додатку.</p>
+        <p>Була проведена практична робота із посиланнями, таблицями, зображеннями, формами та іншими елементами HTML-сторінки. Також для зручності мною була використана бібліотека Bootstrap, що значно пришвидшило розробку.</p>
+        <p>У результаті було розроблено прототип WEB-додатку, який стане основою для подальшого розширення функціоналу.</p>
+    </div>
+    <div class="view" id="zero">
+        <h3>Опис предметної області</h3>
+        <p>Функціональні вимоги:</p>
+        <ul>
+            <li>Користувач повинен мати можливість пошуку необхідного товару у каталозі</li>
+            <li>Користувач повинен мати можливість переглядати товари певної категорії</li>
+            <li>Користувач повинен мати можливість дізнатись деталі певного товару</li>
+            <li>Користувач повинен мати можливіть обрати характеристики товару перед тим, як додати його у кошик</li>
+            <li>Користувач повинен мати можливість додати певну кількість товару в кошик</li>
+            <li>Користувач повинен мати можливість переглянути вміст кошика</li>
+            <li>Користувач повинен мати можливість оформити замовлення із товарами у кошику</li>
+            <li>Адміністратор повинен отримати повідомлення про створення нового замовлення</li>
+        </ul>
+        <p>Нефункціональні вимоги:</p>
+        <ul>
+            <li>WEB-додаток повинен бути розміщений у мережі</li>
+            <li>WEB-додаток повинен підтримувати 50 користувачів одночасно</li>
+            <li>WEB-додаток повинен зберігати товари у кошику під час сесії</li>
+            <li>WEB-додаток повинен працювати із затримкою меншою за 1s</li>
+            <li>WEB-додаток повинен коректно відображатись у більшості браузерів</li>
+        </ul>
+        <img src="resources/Use Case.jpg"/>
+    </div>
+</body>
+
+</html>

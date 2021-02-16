@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    function show(view) {
+        const elem = document.getElementById(view);
+        const views = document.querySelectorAll(".view");
+        console.log(views);
+        views.forEach(view => {
+            view.setAttribute("style", "display: none");
+        })
+        elem.setAttribute("style", "display: inline");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="#" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="#" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="#" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="#" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="#" id="lab7">
+            <div> Лаб №7</div>
+        </a>
+        <a href="#" id="lab8">
+            <div> Лаб №8</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №2</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Cписки</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>Ідентифікатори</p>
+        </div>
+        <div class="big-tab">
+            <p>Методи визначення таблиці стилів</p>
+            <div class="tab" onclick="show('four')">
+                <p>Зв'язування (linking)</p>
+            </div>
+            <div class="tab" onclick="show('five')">
+                <p>Вбудовування (embeding)</p>
+            </div>
+            <div class="tab" onclick="show('six')">
+                <p>Вкладення (inline)</p>
+            </div>
+            <div class="tab" onclick="show('seven')">
+                <p>Імпорт (import) (IE)</p>
+            </div>
+        </div>
+        <div class="big-tab">
+            <p>Селектори</p>
+            <div class="tab" onclick="show('eight')">
+                <p>Cелектори тегу і класу</p>
+            </div>
+            <div class="tab" onclick="show('nine')">
+                <p>Інші селектори</p>
+            </div>
+            <div class="tab" onclick="show('ten')">
+                <p>Групування селекторів</p>
+            </div>
+        </div>
+        <div class="tab" onclick="show('eleven')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі лабораторної роботи №2</h3>
+        <p>Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В
+            HTML-ДОКУМЕНТАХ.</p>
+
+        <p>Мета: придбати практичні навички роботи з селекторами,ідентифікаторами, списками, різноманітними
+            властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням
+            текстових елементів, 4 методами визначення таблиці стилів.</p>
+    </div>
+    <div class="view" id="two">
+        <h3>Списки</h3>
+        <xmp>
+            <h3>Хто ми?</h3>
+            <ul>
+                <li>Ми компанія із багаторічним досвідом</li>
+                <li>Ми група дизайнерів, які втілюють в життя свої задуми</li>
+                <li>Ми професіонали з пошиву одягу</li>
+            </ul>
+            <h3>Що ми робимо?</h3>
+            <ul>
+                <li>Ми створюємо тренди в сфері одягу</li>
+                <li>Ми прагнемо доступності моди для усіх жінок</li>
+                <li>Ми втілюємо комфорт у нашому одязі</li>
+                <li>Ми працюємо для вас!</li>
+            </ul>
+        </xmp>
+        <img src="resources/List.png" />
+    </div>
+    <div class="view" id="three">
+        <h3> Ідентифікатори</h3>
+        <xmp>
+            <div id="baner">
+                <img src="https://minimal.com.ua/wp-content/uploads/2020/08/RD-11.jpg" />
+            </div>
+        </xmp>
+    </div>
+    <div class="view" id="four">
+        <h3>Зв'язування (linking)</h3>
+        <img src="resources/linking.png" />
+    </div>
+    <div class="view" id="five">
+        <h3>Вбудовування (embeding)</h3>
+        <img src="resources/embedingImport.png" />
+    </div>
+    <div class="view" id="six">
+        <h3>Вкладення (inline)</h3>
+        <img src="resources/inline.png" />
+    </div>
+    <div class="view" id="seven">
+        <h3>Імпорт (import) (IE)</h3>
+        <img src="resources/embedingImport.png" />
+    </div>
+    <div class="view" id="eight">
+        <h3>Селектори тегу та класу</h3>
+        <xmp>
+                h1 {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 64px;
+                    letter-spacing: 0.3em;
+                    text-align: center;
+                    margin: 20px;
+                }
+                
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 90%;
+                    height: 218px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(169, 169, 169, 0.15);
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    margin: 30px auto;
+                }
+        </xmp>
+    </div>
+    <div class="view" id="nine">
+        <h3>Інші селектори</h3>
+        <p>Універсальний селектор</p>
+        <xmp>
+                * {
+                    font-family: 'Montserrat', sans-serif;
+                }
+        </xmp>
+        <p>Id-селектор + Дочірній селектор</p>
+        <xmp>
+                #list > img {
+                    width: 100%;
+                    max-width: 40%;
+                    height: 20%;
+                    object-fit: cover;
+                    float: left;
+                    margin: 0px 100px;
+                    vertical-align: middle
+                }
+        </xmp>
+        <p>Id-селектор + контекстний селектор</p>
+        <xmp>
+                #location p {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    color: rgb(77, 77, 77);
+                    margin: 20px auto 10px 90px;
+                }
+        </xmp>
+        <p>Селектор атрибута</p>
+        <xmp>
+                input[type="number"] {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    letter-spacing: 0.1em;
+                    text-align: center;
+                }
+        </xmp>
+        <p>Псевдоклас</p>
+        <xmp>
+                img.categorie:hover {
+                    opacity: 20%;
+                  }
+        </xmp>
+    </div>
+    <div class="view" id="ten">
+        <h3>Групування селекторів</h3>
+        <xmp>
+                p, tr {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 24px;
+                    letter-spacing: 0.1em;
+                }
+        </xmp>
+    </div>
+    <div class="view" id="eleven">
+        <h3>ВИСНОВКИ</h3>
+        <p>У рамках даної лабараторної я ознайомилась із каскадними таблицями стилів. Ці знання я застосувала до власного WEB-додатку.</p>
+        <p>Я виконала стильове оформлення списків. Була проведена практична робота із різномаїттям селекторів та ідентифікаторами. До WEB-додатку було застосоване стильове оформлення текстових елементів.</p>
+        <p>У результаті було стилістично оформлення прототип WEB-додатку за допомогою каскадних таблиць стилів.</p>
+    
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    function show(view) {
+        const elem = document.getElementById(view);
+        const views = document.querySelectorAll(".view");
+        views.forEach(view => {
+            view.setAttribute("style", "display: none");
+        })
+        elem.setAttribute("style", "display: inline");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="lab3.html" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="#" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="#" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="#" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="#" id="lab7">
+            <div> Лаб №7</div>
+        </a>
+        <a href="#" id="lab8">
+            <div> Лаб №8</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №3</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Зовнішній вигляд макету</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>HTML-код макету</p>
+        </div>
+        <div class="tab" onclick="show('four')">
+            <p>Розмітка сторінки за допомогою таблиці</p>
+        </div>
+        <div class="tab" onclick="show('five')">
+            <p>Розмітка сторінки за допомогою плаваючих блоків</p>
+        </div>
+        <div class="tab" onclick="show('six')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі лабораторної роботи №3</h3>
+        <p>Тема: БЛОЧНА ВЕРСТКА HTML-ДОКУМЕНТУ ЗА МАКЕТОМ. </p>
+        <p>Мета: придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів,
+            з’ясувати переваги та недоліки типів макетів веб-сторінок</p>
+        <p>Варіант: 2</p>
+        <img src="resources/lab3/variant.png" />
+
+    </div>
+    <div class="view" id="two">
+        <h3>Зовнішній вигляд макету</h3>
+        <p>Для побудови веб-сторінки я обрала адаптивний тип макету, що довзволить зручно переглядати веб-сторінку з
+            усіх пристроїв.</p>
+        <img src="resources/lab3/Products.png" />
+        <img src="resources/lab3/ProductsPhone.png" style="width: 40%" />
+    </div>
+    <div class="view" id="three">
+        <h3>HTML-код макету</h3>
+        <xmp>
+            <div class="header">
+                <div id="topHeader">
+                    <div class="logo">
+                        <nobr>Logo</nobr>
+                    </div>
+                    <div class="miniMedia">...</div>
+                </div>
+            </div>
+
+            <nav class="navbar sticky-top navbar-expand-md bg-white navbar-dark" id="headerButtons">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars" style="color: #121212;; font-size:28px;"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">...</div>
+            </nav>
+
+            <h1>КУРТКИ</h1>
+
+
+            <div class="products card-deck">
+                <div class="row align-content-center">
+                    <div class="col-md-4">
+                        <a class="card" href="item.html">...</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">...</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="logo">
+            <nobr>Logo</nobr>
+        </div>
+        <div class="rights">
+            <p>All rights reserved. 2020®</p>
+        </div>
+        <div class="media">...</div>
+    </footer>
+    </xmp>
+    </div>
+    <div class="view" id="four">
+        <h3>Розмітка сторінки за допомогою таблиці</h3>
+        <xmp>
+            <table style="width: 100%; height: 100%; border-collapse: collapse;">
+                <tr>
+                    <td colspan="3" class="yellow text">Розмітка сторінки за допомогою таблиці</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="blue"></td>
+                    <td colspan="2" class="red" style="text-align: center"><a href="float.html"
+                            class="button text">Перейти до плаваючих елементів</a></td>
+                </tr>
+                <tr style="height: 600px">
+                    <td></td>
+                    <td class="blue"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="yellow"></td>
+                </tr>
+            </table>
+        </xmp>
+        <img src="resources/lab3/tableMaket.png" />
+    </div>
+    <div class="view" id="five">
+        <h3>Розмітка сторінки за допомогою плаваючих блоків</h3>
+        <xmp>
+            <div class="yellow text" style="width: 100%; height: 100px;  overflow: hidden;">
+                <nobr style="padding-left: 50px;">Розмітка сторінки за допомогою плаваючих блоків</nobr>
+            </div>
+            <div class="blue" style="width: 33%; height: 650px; float: left;"></div>
+            <div class="red" style="width: 67%; height: 150px; float: left;">
+                <a href="table.html" class="button text">Перейти до таблиці</a>
+            </div>
+            <div style="width: 33%; height: 300px; float: left;"></div>
+            <div class="blue" style="width: 34%; height: 500px; float: left;"></div>
+            <div class="yellow" style="width: 100%; height: 150px; clear: both;"></div>
+        </xmp>
+        <img src="resources/lab3/floatMaket.png"/>
+    </div>
+    <div class="view" id="six">
+        <h3>ВИСНОВКИ</h3>
+        <p>В рамках даної лабараторної я ознайомилась із різноманіттям типів побудови макету, та застосувала їх при верстці власного Web-додатку.</p>
+        <p>Для цього я обрала адаптивний тип верстки, оскільки він найкраще підходить для перегляду веб-сторінки на різних пристроях.</p>
+        <p>Я також порівняла табличний тип верстки із макетуванням на основі плаваючих елементів.</p>
+        <p>Зрештою, я з'ясувала переваги та недоліки різноманітних типів макетування, що допоможе мені у майбутньому із вибором верстки для веб-додатків.</p>
+    </div>
+</body>
+
+</html>

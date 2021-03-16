@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    function show(view) {
+        const elem = document.getElementById(view);
+        const views = document.querySelectorAll(".view");
+        views.forEach(view => {
+            view.setAttribute("style", "display: none");
+        })
+        elem.setAttribute("style", "display: inline");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="lab3.html" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="lab4.html" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="#" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="#" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="#" id="lab7">
+            <div> Лаб №7</div>
+        </a>
+        <a href="#" id="lab8">
+            <div> Лаб №8</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №4</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Зовнішній вигляд макету</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>HTML-код макету</p>
+        </div>
+        <div class="tab" onclick="show('four')">
+            <p>Розмітка сторінки за допомогою flexbox</p>
+        </div>
+        <div class="tab" onclick="show('five')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі лабораторної роботи №3</h3>
+        <p>Тема: БЛОЧНА ВЕРСТКА HTML-ДОКУМЕНТУ ЗА МАКЕТОМ. ВЕРСТКА НА FLEXBOX. </p>
+        <p>Мета: придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX</p>
+        <p>Варіант: 2</p>
+        <img src="resources/lab4/variant.png" />
+
+    </div>
+    <div class="view" id="two">
+        <h3>Зовнішній вигляд макету</h3>
+        <p>Переглянути можна за <a href="resources/lab4/flexbox.html">посиланням</a></p>
+        <img src="resources/lab4/maketFlexbox.png" />
+    </div>
+    <div class="view" id="three">
+        <h3>HTML-код макету</h3>
+        <xmp>
+
+            <body>
+                <div>
+                    <h1>Професія Java-розробник</h1>
+                </div>
+                <div>
+                    <ul class="row">
+                        <li>Портфоліо для старту кар'єри</li>
+                        ...
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Як проходить навчання</h2>
+                    <div class="row">
+                        <div class="card">
+                            <div class="info">
+                                <h4 class="number">1</h4>
+                                <h4>Дивіться відеолекції</h4>
+                                <p>Якісне відео із зрозумілим поясненням теорії.</p>
+                            </div>
+                            <img src="resources/conference.png" />
+                        </div>
+                        ...
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Рівні навчання</h2>
+                    <div class="row image-text">
+                        <img src="..." />
+                        <div class="text">
+                            <h3>Перший рівень: чітка і зрозуміла теорія</h3>
+                            ...
+                        </div>
+                    </div>
+                </div>
+                ...
+                <div class="row footer">
+                    <div id="footer-bar">@ 2021</div>
+                    <i class="fab fa-facebook-f"></i>
+                    ...
+                </div>
+            </body>
+        </xmp>
+    </div>
+    <div class="view" id="four">
+        <h3>Розмітка сторінки за допомогою flexbox</h3>
+        <xmp>
+            .row{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            }
+
+            .card{
+            width: 250px;
+            border: black solid 1px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            }
+        </xmp>
+        <img src="resources/lab4/flexboxExample.png" />
+    </div>
+    </div>
+    <div class="view" id="five">
+        <h3>ВИСНОВКИ</h3>
+        <p>В рамках даної лабараторної я ознайомилась із побудовою макету за технологією flexbox.</p>
+        <p>Flexbox — потужний засіб, який містить в собі велики вибір властивостей.</p>
+        <p>Переваги</p>
+        <ul>
+            <li>Блоки легко стають гнучкими, елементи розтягуються та стискаються, займаючи весь простір</li>
+            <li>Легке вирівнювання елементів по горизонталі та вертикалі</li>
+            <li>Неважливий порядок HTML-елементів, адже його можна змінити за допомогою flex-direction</li>
+            <li>Елементи легко розташовуються в ряд або в колонку.</li>
+        </ul>
+        <p>Недоліки</p>
+        <ul>
+            <li>Не підтримується деякими бразерами, особливо старими версіями</li>
+        </ul>
+        <p>Зрештою, переваги використання flexbox значно перевищують недоліки, тому на разі це є поширений інструмент,
+            який часто використовується при розмітці.</p>
+    </div>
+</body>
+
+</html>

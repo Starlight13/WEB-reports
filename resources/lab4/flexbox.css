@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    background: #ffd363;
+    padding: 5px 20px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    list-style-position: inside;
+    background: #ffd363;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+
+.section{
+    margin: 50px;
+    width: 80%;
+}
+
+.card{
+    width: 250px;
+    border: black solid 1px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info{
+    height: 200px;
+}
+
+
+.number{
+    background: #ffd363;
+    border-radius: 20px;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.section .card img {
+    max-width: 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    position: relative;
+    bottom: 10px
+}
+
+.section img{
+    max-width: 1000px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+.image-text{
+    justify-content: space-around;
+
+}
+
+.image-text p{
+    width: 500px;
+}
+
+h2{
+    font-size: 36px;
+}
+
+.footer{
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+#footer-bar{
+    background: #000000;
+    width: 70%;
+    padding: 20px;
+}
+
+.footer i{
+    background: #000000;
+    padding: 20px;
+    font-size: 20px;
+    width: 2%;
+    text-align: center;
+}

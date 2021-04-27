@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="scripts/show.js"></script>
+<script src="scripts/lab5.js"></script>
+<script>
+    function helloWorld(){
+        alert("hello world, <script>!");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="lab3.html" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="lab4.html" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="lab5.html" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="#" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="#" id="lab7">
+            <div> Лаб №7</div>
+        </a>
+        <a href="#" id="lab8">
+            <div> Лаб №8</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №5</p>
+        </div>
+        <div class="tab" onclick="show('five')">
+            <p>Застосуванння JavaScript</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Робота з масивом</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>Динамічне меню</p>
+        </div>
+        <div class="tab" onclick="show('four')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі лабораторної роботи №5</h3>
+        <p>Тема: ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ.
+            КЛАСИ,ОБ’ЄКТИ, ФУНКЦІЇ, В МОВІ JAVASCRIPT. ПОДІЇ ТА ОБРОБКА ПОДІЙ.
+            ПРОГРАМНА ВЗАЄМОДІЯ З HTML ДОКУМЕНТАМИ НА ОСНОВІ DOM АРІ.</p>
+        <p>Мета: придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови
+            JavasSript, використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові JavasSript.
+        </p>
+        <p>Варіант: 2</p>
+        <ol>
+            <li>Створити одновимірний массив, кількість елементів якого задана користувачем. Знайти суму елементів з
+                парними
+                індексами, добуток від’ємних елементів, максимальний елемент та його індекс серед додатних чисел,
+                мінімальний елемент та його індекс серед елементів зх непарними індексами. Упорядкувати масив у порядку
+                зростання, Надрукувати вхідний та вихідний масив.</li>
+            <li><b><i>Динамічне меню: </i></b>Сформувати багаторівневе меню (горизонтальне та вертикальне), пункти меню
+                взяти із статичного масиву.
+                При натисканні на визначений пункт меню має завантажуватися відповідна HTML-сторінка. Меню має бути
+                присутнім на усіх сторінках.</li>
+        </ol>
+
+    </div>
+    <div class="view" id="two">
+        <h3>Робота з масивом</h3>
+        <label for="number">Введіть кількість елементів масиву</label>
+        <input type="number" name="number" id="number" min="2" value="2" />
+        <button type="button" onclick="manipulate(document.getElementById('number').value)">Підтвердити</button>
+        <div class="input">
+            <!-- <xmp>
+                const arr = [];
+                for (let i = 0; i < n; i++) { arr.push(Math.floor(Math.random() * 50 - 25)); } 
+            </xmp>  -->
+            <label for="inputArr">Вхідний масив</label>
+            <input type="text" name="inputArr" id="inputArr" readonly>
+        </div>
+        <div class="input">
+            <xmp>
+                function getSumOfEven(arr) {
+                let sumOfEven = 0;
+                for (let i = 0; i < arr.length; i +=2) { sumOfEven +=arr[i]; } return sumOfEven; } </xmp>
+                    <label for="sumOfEven">Сума елементів з парними індексами</label>
+                    <input type="text" name="sumOfEven" id="sumOfEven" readonly>
+        </div>
+        <div class="input">
+            <xmp>
+                function getProductOfNegative(arr) {
+                let productOfNegative = 1;
+                arr.forEach(element => {
+                if (element < 0) { productOfNegative=productOfNegative * element; } }); return productOfNegative; }
+                    </xmp>
+                    <label for="productOfNegative">Добуток від’ємних елементів</label>
+                    <input type="text" name="productOfNegative" id="productOfNegative" readonly>
+        </div>
+        <div class="input">
+            <xmp>
+                function getMaxWithIndexOfPositive(arr) {
+                let indexesOFPositive = arr.reduce((ret_arr, number, index) => {
+                if (number >= 0) ret_arr.push(index)
+                return ret_arr
+                }, [])
+                let maxPositive = arr[indexesOFPositive[0]];
+                let maxIndex = indexesOFPositive[0]
+                for (let i = 0; i < indexesOFPositive.length; i++) { if (arr[indexesOFPositive[i]]> maxPositive) {
+                    maxPositive = arr[indexesOFPositive[i]];
+                    maxIndex = indexesOFPositive[i];
+                    }
+                    }
+                    const map = new Map();
+                    map.set("element", maxPositive);
+                    map.set("index", maxIndex);
+                    return map;
+                    }
+            </xmp>
+            <label for="maxElemWithIndexOfPositive">Максимальний елемент та його індекс серед додатних чисел</label>
+            <input type="text" name="maxElemWithIndexOfPositive" id="maxElemWithIndexOfPositive" readonly>
+        </div>
+        <div class="input">
+            <xmp>
+                function getMinWithIndexOfUneven(arr) {
+                let minUneven = arr[1];
+                let minIndex = 1;
+                for (let i = 1; i < arr.length; i +=2) { if (arr[i] < minUneven) { minUneven=arr[i]; minIndex=i; } }
+                    const map=new Map(); map.set("element", minUneven); map.set("index", minIndex); return map; } </xmp>
+                    <label for="minElementWithIndexOfUneven">Мінімальний елемент та його індекс серед елементів з
+                        непарними
+                        індексами</label>
+                    <input type="text" name="minElementWithIndexOfUneven" id="minElementWithIndexOfUneven" readonly>
+        </div>
+        <div class="input">
+            <xmp>
+                function bubbleSort(arr) {
+                let sortedArr = arr;;
+                for (var i = 0; i < sortedArr.length; i++) { for (var j=0; j < sortedArr.length - i - 1; j++) { if
+                    (sortedArr[j]> sortedArr[j + 1]) {
+                    var temp = sortedArr[j];
+                    sortedArr[j] = sortedArr[j + 1];
+                    sortedArr[j + 1] = temp;
+                    }
+                    }
+                    }
+                    return sortedArr;
+                    }
+            </xmp>
+            <label for="sortedArr">Відсортований масив (bubble sort)</label>
+            <input type="text" name="sortedArr" id="sortedArr" readonly>
+        </div>
+    </div>
+    <div class="view" id="three">
+        <h3>Динамічне меню</h3>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="https://starlight13.github.io/LogoShop/index.html">Website</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="dropDown()">Labs
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown">
+                    <a href="lab1.html">Lab 1</a>
+                    <a href="lab2.html">Lab 2</a>
+                    <a href="lab3.html">Lab 3</a>
+                    <a href="lab4.html">Lab 4</a>
+                    <a href="lab5.html">Lab 5</a>
+                </div>
+            </div>
+        </div>
+        <xmp>
+            function dropDown() {
+            document.getElementById("dropdown").classList.toggle("show");
+            }
+
+            window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("dropdown");
+            if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+            }
+            }
+            }
+        </xmp>
+        <div class="navbar-vert">
+            <a href="index.html">Home</a>
+            <a href="https://starlight13.github.io/LogoShop/index.html">Website</a>
+            <div class="dropdown-vert">
+                <button class="dropbtn" onclick="dropDownVert()">Labs
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content-vert" id="dropdown-vert">
+                    <a href="lab1.html">Lab 1</a>
+                    <a href="lab2.html">Lab 2</a>
+                    <a href="lab3.html">Lab 3</a>
+                    <a href="lab4.html">Lab 4</a>
+                    <a href="lab5.html">Lab 5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="view" id="four">
+        <h3>ВИСНОВКИ</h3>
+        <p>В рамках даної лабораторної я закріпила знання та придбала практичні навички роботи маніпулювання
+            інформаційним вмістом Web-документа засобами мови
+            JavaScript, використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript
+        </p>
+        <p>У першій частині лабараторної, я проводила маніпуляції із масивами, такі як пошук найменшого/найбільшого
+            елементу, суми та добутки певних елементів масиву, сортування.</p>
+        <p>У другій частині, я створила багаторівневе меню, та відобразила його на сторінці за допомогою поєднання
+            JavaScript та CSS.</p>
+        <p>Ці знання неодмінно допоможуть мені у розробці власного веб-додатку.</p>
+    </div>
+    <div class="view" id="five">
+        <h3>Застосуванння JavaScript</h3>
+        <ol>
+            <li>гіпертекстове посилання (схема URL)</li>
+            <a href="JavaScript: alert('Hello world, URL!')">Say hello world!</a>
+            <li>обробник події (handler)</li>
+            <button onclick="alert('Hello world, button!')">Say hello world!</button>
+            <li>підстановка (entity)</li>
+            <li>вставка (тег SCRIPT)</li>
+            <button onclick="helloWorld()">Say hello world!</button>
+        </ol>
+    </div>
+</body>
+
+</html>

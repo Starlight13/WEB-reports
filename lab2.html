@@ -9,19 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<script>
-    function show(view) {
-        const elem = document.getElementById(view);
-        const views = document.querySelectorAll(".view");
-        views.forEach(view => {
-            view.setAttribute("style", "display: none");
-        })
-        elem.setAttribute("style", "display: inline");
-        console.log(elem);
-        console.log(elem.getAttribute("style"));
-        console.log('done');
-    }
-</script>
+<script src="scripts/show.js"></script>
 
 <body>
 
@@ -38,7 +26,7 @@
         <a href="lab4.html" id="lab4">
             <div> Лаб №4</div>
         </a>
-        <a href="#" id="lab5">
+        <a href="lab5.html" id="lab5">
             <div> Лаб №5</div>
         </a>
         <a href="#" id="lab6">
@@ -121,7 +109,7 @@
                 <li>Ми працюємо для вас!</li>
             </ul>
         </xmp>
-        <img src="resources/List.png" />
+        <img src="resources/lab2/List.png" />
     </div>
     <div class="view" id="three">
         <h3> Ідентифікатори</h3>
@@ -130,27 +118,27 @@
                 <img src="https://minimal.com.ua/wp-content/uploads/2020/08/RD-11.jpg" />
             </div>
         </xmp>
-        <img src="resources/Title.png"/>
+        <img src="resources/lab1/Title.png"/>
     </div>
     <div class="view" id="four">
         <h3>Зв'язування (linking)</h3>
-        <img src="resources/linking.png" />
-        <img src="resources/Title.png"/>
+        <img src="resources/lab2/linking.png" />
+        <img src="resources/lab1/Title.png"/>
     </div>
     <div class="view" id="five">
         <h3>Вбудовування (embeding)</h3>
-        <img src="resources/embedingImport.png" />
-        <img src="resources/ImageList.png"/>
+        <img src="resources/lab2/embedingImport.png" />
+        <img src="resources/lab2/ImageList.png"/>
     </div>
     <div class="view" id="six">
         <h3>Вкладення (inline)</h3>
-        <img src="resources/inline.png" />
-        <img src="resources/ImageList.png"/>
+        <img src="resources/lab2/inline.png" />
+        <img src="resources/lab2/ImageList.png"/>
     </div>
     <div class="view" id="seven">
         <h3>Імпорт (import) (IE)</h3>
-        <img src="resources/embedingImport.png" />
-        <img src="resources/HeaderFooter.png"/>
+        <img src="resources/lab2/embedingImport.png" />
+        <img src="resources/lab2/HeaderFooter.png"/>
     </div>
     <div class="view" id="eight">
         <h3>Селектори тегу та класу</h3>
@@ -178,7 +166,7 @@
                     margin: 30px auto;
                 }
         </xmp>
-        <img src="resources/selectorClass.png"/>
+        <img src="resources/lab2/selectorClass.png"/>
     </div>
     <div class="view" id="nine">
         <h3>Інші селектори</h3>
@@ -188,7 +176,7 @@
                     font-family: 'Montserrat', sans-serif;
                 }
         </xmp>
-        <img src="resources/HeaderFooter.png"/>
+        <img src="resources/lab2/HeaderFooter.png"/>
         <p>Id-селектор + Дочірній селектор</p>
         <xmp>
                 #list > img {
@@ -201,7 +189,7 @@
                     vertical-align: middle
                 }
         </xmp>
-        <img src="resources/ImageList.png"/>
+        <img src="resources/lab2/ImageList.png"/>
         <p>Id-селектор + контекстний селектор</p>
         <xmp>
                 #location p {
@@ -213,7 +201,7 @@
                     margin: 20px auto 10px 90px;
                 }
         </xmp>
-        <img src="resources/selectorContext.png"/>
+        <img src="resources/lab2/selectorContext.png"/>
         <p>Селектор атрибута</p>
         <xmp>
                 input[type="number"] {
@@ -225,14 +213,14 @@
                     text-align: center;
                 }
         </xmp>
-        <img src="resources/selectorAttribute.png"/>
+        <img src="resources/lab2/selectorAttribute.png"/>
         <p>Псевдоклас</p>
         <xmp>
                 img.categorie:hover {
                     opacity: 20%;
                   }
         </xmp>
-        <img src="resources/pseudpClass.png"/>
+        <img src="resources/lab2/pseudpClass.png"/>
     </div>
     <div class="view" id="ten">
         <h3>Групування селекторів</h3>
@@ -245,7 +233,7 @@
                     letter-spacing: 0.1em;
                 }
         </xmp>
-        <img src="resources/Table.png"/>
+        <img src="resources/lab1/Table.png"/>
     </div>
     <div class="view" id="eleven">
         <h3>ВИСНОВКИ</h3>

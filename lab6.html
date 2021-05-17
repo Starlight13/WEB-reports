@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="scripts/show.js"></script>
+<script src="scripts/lab5.js"></script>
+<script>
+    function helloWorld() {
+        alert("hello world, <script>!");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="lab3.html" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="lab4.html" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="lab5.html" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="lab6.html" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі лабораторної роботи №6</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Динамічні елементи</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>Плагін UniteGallery</p>
+        </div>
+        <div class="tab" onclick="show('four')">
+            <p>Кнопки соціальних мереж</p>
+        </div>
+        <div class="tab" onclick="show('five')">
+            <p>Інформери</p>
+        </div>
+        <div class="tab" onclick="show('six')">
+            <p>Модулі для мультимедіа</p>
+        </div>
+        <div class="tab" onclick="show('seven')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі лабораторної роботи №6</h3>
+        <p>Тема: ВИКОРИСТАННЯ В СЦЕНАРІЯХ JAVASCRIPT БІБЛІОТЕК КРОС-БРАУЗЕРНИХ ІНТЕРФЕЙСІВ МЕТОДІВ DOM. БІБЛІОТЕКА
+            JQUERY UI.
+            ЗАСОБИ НАЛАГОДЖЕННЯ І ТЕСТУВАННЯ СЦЕНАРІЇВ JAVASCRIPT.
+        </p>
+        <p>Мета: придбати практичні навички роботи jQuery UI, вміти додавати до сайту динамічні елементи цієї
+            бібіліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.
+        </p>
+        <p>Результат роботи розміщено за <a href="https://starlight13.github.io/WEB6/">посиланням</a></p>
+        <p>Код розміщено за <a href="https://github.com/Starlight13/WEB6">посиланням</a></p>
+        <ol>
+            <li>Користуючись документацією бібліотеки https://jqueryui.com/ додати до сайту (або до окремої сторінки)
+                2-3 динамічних елементи</li>
+            <li>Додати до сайту (або до окремої сторінки) плагін галереї UniteGallery</li>
+            <li>Додати до сайту (або до окремої сторінки) кнопки соціальних мереж</li>
+            <li>Додати сайту (або до окремої на сторінці) інформери</li>
+            <li>Додати сайту (або до окремої на сторінці) один (або більше) із модулів jQuery для мультимедіа
+                (зображення і відео).</li>
+        </ol>
+
+    </div>
+    <div class="view" id="two">
+        <h3>Динамічні елементи</h3>
+        Я обрала для реалізації елемент slider та datePicker
+        <img src="resources/lab6/slider.png">
+        <xmp>
+            <div id="slider-block">
+                <div style="width: 400px" id="slider"></div>
+                <p>Current value: <span style="color: rgb(253, 121, 198); font-weight: bold;" id="result-slider"></span>
+                </p>
+            </div>
+            $("#slider").slider({
+            animate: "slow",
+            range: "min",
+            value: 50,
+            slide: function (event, ui) {
+            $("#result-slider").text(ui.value);
+            }
+            });
+        </xmp>
+        <img src="resources/lab6/datePicker.png">
+        <xmp>
+            <div id="datepickers">
+                <p>Date: <input id="datepicker2"> </p>
+            </div>
+            $("#datepicker2").datepicker({
+            showAnim: "slideDown"
+            });
+        </xmp>
+    </div>
+    <div class="view" id="three">
+        <h3>Плагін UniteGallery</h3>
+        <p>За допомогою плагіну UniteGallery я змогла реалізувати карусель-фотогалерею, у якій можна збільшувати
+            зображення, переглядати їх у повноекранному режимі, а також є можливість перегляду відео.</p>
+        <img src="resources/lab6/uniteGallery.png">
+        <img src="resources/lab6/fullScreen.png">
+        <img src="resources/lab6/video.png">
+        <xmp>
+            <div id="gallery" style="display: none; width: 100%; height: auto;">
+
+                <img alt="Preview Image 1"
+                    src="https://i.pinimg.com/originals/35/82/21/358221b85dc0c666cbd6bf4961a260db.jpg"
+                    data-image="https://i.pinimg.com/originals/35/82/21/358221b85dc0c666cbd6bf4961a260db.jpg"
+                    data-description="Preview Image 1 Description">
+
+                <img alt="Preview Image 2"
+                    src="https://cdn.hovia.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg"
+                    data-image="https://cdn.hovia.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg"
+                    data-description="Preview Image 2 Description">
+
+                <img alt="Youtube Video" data-type="youtube" data-videoid="dQw4w9WgXcQ"
+                    data-description="You can include youtube videos easily!">
+
+                <img data-type="youtube" data-videoid="f7Yimxud4UI"
+                    data-description="You can include youtube videos easily!">
+
+                <img alt="Preview Image 3"
+                    src="https://i.pinimg.com/originals/6a/8b/50/6a8b50ac0aa0e64f224bcee2f0afbd66.jpg"
+                    data-image="https://i.pinimg.com/originals/6a/8b/50/6a8b50ac0aa0e64f224bcee2f0afbd66.jpg"
+                    data-description="Preview Image 3 Description">
+
+                <img alt="Preview Image 3"
+                    src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711"
+                    data-image="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711"
+                    data-description="Preview Image 3 Description">
+
+
+            </div>
+            jQuery(document).ready(function () {
+
+            jQuery("#gallery").unitegallery();
+
+            });
+        </xmp>
+    </div>
+    </div>
+    <div class="view" id="four">
+        <h3>Кнопки соціальних мереж</h3>
+        <p>Для розміщення кнопок соціальних мереж я скористалась плагіном
+            jQuery-Plugin-For-Horizontal-Floating-Social-Share-Bar. Він дозволяє створити привабливу фіксовану панель
+            для поширення інформації через соціальні мережі.</p>
+        <img src="resources/lab6/socialMedia.png">
+        <xmp>
+            $("body").floatingSocialShare({
+            buttons: [
+            "facebook", "linkedin", "pinterest", "telegram", "twitter", "viber", "whatsapp"
+            ],
+            text: "share with: ",
+            url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"
+            });
+        </xmp>
+    </div>
+    <div class="view" id="five">
+        <h3>Інформери</h3>
+        <p>За допомогою бібліотеки jQuery можна легко додати інформери, які динамічно змінюють інформацію згідно з часом
+            та місцерозташуванням користувача.</p>
+        <h4>Погода</h4>
+        <img src="resources/lab6/weather.png">
+        <h4>Курс валют</h4>
+        <img src="resources/lab6/minfin.png">
+        <h4>Годинник</h4>
+        <img src="resources/lab6/clock.png">
+    </div>
+    <div class="view" id="six">
+        <h3>Модулі для мультимедіа</h3>
+        <p>Існує велика кількість готових модулів для інтеграції мультимедіа до сторінки</p>
+        <p>Для прикладу я обрала модуль giffy, який дозволяє програвати gif при наведенні на неї курсора.</p>
+        <img src="resources/lab6/gif.png">
+        <xmp>
+            <div id="gifPlayer" style="margin: 40px;">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711"
+                    style="width: 60%;" data-cover="gif.png" id="giffy-img">
+            </div>
+            $('#giffy-img').giffy();
+        </xmp>
+        <p>Також я використала модуль Clean-Audio-Player-jQuery для створення мінімалістичного, привабливого та інтерактивного програвача аудіо. </p>
+        <img src="resources/lab6/audioPlayer.png">
+        <xmp>
+            <div id="audioPlayer">
+                <audio preload="auto" controls>
+                    <source src="rick-astley_never-gonna-give-you-up.mp3">
+                </audio>
+            </div>
+            $(function () {
+                $('audio').audioPlayer();
+            });
+        </xmp>
+    </div>
+    <div class="view" id="seven">
+        <h3>ВИСНОВКИ</h3>
+        <p>И рамках даної лабараторної я придбала практичні навички роботи jQuery UI. Для засвоєння матеріалу лекцій я додала до сайту динамічні елементи
+            бібіліотеки jQuery, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.</p>
+            <h4>Переваги</h4>
+            <ul>
+                <li>Бібліотека є простою у використанні, лише кілька стрічок коду роблять сторінку анімованою та живою.</li>
+                <li>Гнучкість за рухнок величезної кількості наявних плагінів</li>
+                <li>Open Source продукт швидко розвивається та надає найкращі рішення</li>
+            </ul>
+            <h4>Недоліки</h4>
+            <ul>
+                <li>Open Source продукт не має єдиного стандарту та сформованих практик.</li>
+                <li>Наявність великої кількості версій, які не підтримуються по різному.</li>
+                <li>Повільніше за CSS.</li>
+            </ul>
+    </div>
+</body>
+
+</html>

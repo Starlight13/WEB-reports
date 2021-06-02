@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Романішина Ольга ІП-81</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/lab.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="scripts/show.js"></script>
+<script src="scripts/lab5.js"></script>
+<script>
+    function helloWorld() {
+        alert("hello world, <script>!");
+    }
+</script>
+
+<body>
+
+    <div id="menu">
+        <a href="lab1.html" id="lab1">
+            <div> Лаб №1</div>
+        </a>
+        <a href="lab2.html" id="lab2">
+            <div> Лаб №2</div>
+        </a>
+        <a href="lab3.html" id="lab3">
+            <div> Лаб №3</div>
+        </a>
+        <a href="lab4.html" id="lab4">
+            <div> Лаб №4</div>
+        </a>
+        <a href="lab5.html" id="lab5">
+            <div> Лаб №5</div>
+        </a>
+        <a href="lab6.html" id="lab6">
+            <div> Лаб №6</div>
+        </a>
+        <a href="additional.html" id="additional">
+            <div>Додаткове завдання</div>
+        </a>
+    </div>
+    <div id="side-menu">
+        <a href="index.html">
+            <div id="home"><i class="fa fa-home"></i> HOME</div>
+        </a>
+        <div class="tab" onclick="show('one')">
+            <p>Тема та постановка задачі</p>
+        </div>
+        <div class="tab" onclick="show('two')">
+            <p>Створення React-додатку</p>
+        </div>
+        <div class="tab" onclick="show('three')">
+            <p>render()</p>
+        </div>
+        <div class="tab" onclick="show('four')">
+            <p>Класи</p>
+        </div>
+        <div class="tab" onclick="show('five')">
+            <p>props</p>
+        </div>
+        <div class="tab" onclick="show('six')">
+            <p>state</p>
+        </div>
+        <div class="tab" onclick="show('seven')">
+            <p>ВИСНОВКИ</p>
+        </div>
+    </div>
+    <div class="view" id="one">
+        <h3>Тема та постановка задачі</h3>
+        <p>Тема: React.</p>
+        <p>Мета: придбати практичні навички роботи з React.</p>
+    </div>
+    <div class="view" id="two">
+        <h3>Створення React-додатку</h3>
+        <p>Команда для Node.js</p>
+        <xmp>npx create-react-app my-app</xmp>
+        <p>Для запуску веб-додатку</p>
+        <xmp>npm start</xmp>
+        <img
+            src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2f5d3f57-ee27-428d-b9c7-1938ffd20bee/typescript-react-figure-05.png">
+        <p>В початок файлу index.js додати наступни рядки </p>
+        <xmp>import React from 'react';
+            import ReactDOM from 'react-dom';
+            import './index.css';</xmp>
+    </div>
+    <div class="view" id="three">
+        <h3>render()</h3>
+        <img src="./resources/additional/render.png">
+        <p>Метод render() — єдиний необхідний метод в класових компонентах.</p>
+        <p>Під час виклику він перевіряє this.props та this.state і повертає один з наступних типів:
+        <ul>
+            <li>React-елементи. Зазвичай створені за допомогою JSX. Наприклад,
+                <div /> і
+                <MyComponent /> є React-елементами, які інструктують React відрендерити вузол DOM або інший компонент
+                визначений користувачем, відповідно.
+            </li>
+            <li>Масиви та фрагменти. Дозволяють повернути декілька елементів під час рендерингу. Перегляньте
+                документацію для фрагментів, щоб дізнатися більше.</li>
+            <li>Портали. Дозволють рендерити дочірні елементи в іншому піддереві DOM. Перегляньте документацію для
+                порталів, щоб дізнатися більше.</li>
+            <li>Рядки і числа. Будуть відрендерені як текстові вузли в DOM.</li>
+            <li>Логічні значення чи null. Не рендерять нічого. (Існують, здебільшого, для підтримки шаблону return test
+                &&
+                <Child />, де test — логічне значення.)
+            </li>
+            </p>
+        </ul>
+        <xmp>
+            class Game extends React.Component {
+            render() {
+            return (
+            <div className="game">
+                <div className="game-board">
+                    <Board />
+                </div>
+            </div>
+            );
+            }
+            }
+        </xmp>
+        <img src="./resources/additional/game.png">
+    </div>
+    </div>
+    <div class="view" id="four">
+        <h3>Класи</h3>
+        <p>React дозволяє вам визначати компоненти як класи чи функції. Компоненти визначені як класи, наразі надають
+            більше можливостей. Щоб визначити класовий React-компонент, вам потрібно розширити React.Component</p>
+        <xmp>
+            class Board extends React.Component {
+            constructor(props) {
+            super(props)
+            this.state = {
+            squares: Array(9).fill(null),
+            nextX: true
+            }
+            }
+        </xmp>
+        <p>Приклад функціонального компоненту</p>
+         <xmp>
+            function Square(props) {
+            return (
+            <button className="square" onClick={props.onClick}>
+                {props.value}
+            </button>
+            );
+            }
+        </xmp>
+    </div>
+    <div class="view" id="five">
+        <h3>Props</h3>
+        <p>Коли React бачить елемент, що представляє визначений користувачем компонент, він передає атрибути JSX та
+            дочірні компоненти цьому компоненту як єдиний об’єкт. Ми називаємо цей об’єкт “пропси”.</p>
+        <img src="./resources/additional/function.png">
+    </div>
+    <div class="view" id="six">
+        <h3>State</h3>
+        <p>Компонент потребує state, коли якісь дані в ньому змінюються з часом.</p>
+        <p>Найбільша різниця між state і props полягає в тому, що props передаються з батьківського компонента, а state
+            керується самим компонентом. Компонент не може змінювати власні props, але може змінювати state.</p>
+        <img src="./resources/additional/state.png">
+    </div>
+    <div class="view" id="seven">
+        <h3>ВИСНОВКИ</h3>
+        <img src="./resources/additional/win.png">
+        <p>В рамках даної лабараторної я придбала практичні навички роботи React. Для засвоєння отриманих знань було
+            написано гру хреситки-нулики.</p>
+        <h4>Переваги React</h4>
+        <ul>
+            <li>В основі прості мови програмування.
+            <li>Надзвичайна гнучкість програми.</li>
+            <li>Використання DOM.</li>
+            <li>Додаток витримує великі навантаження.</li>
+            <li>Забезпечує незмінність батьківських даних.</li>
+        </ul>
+        <h4>Недоліки</h4>
+        <ul>
+            <li>Невпорядкованість документації.</li>
+            <li>Великий вибір інструментів ставить в тупик.</li>
+            <li>Для освоєння всіх нюансів потрібен тривалий час..</li>
+        </ul>
+    </div>
+</body>
+
+</html>
